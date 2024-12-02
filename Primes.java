@@ -3,6 +3,8 @@ public class Primes {
        int n = Integer.parseInt(args[0]);
        boolean [] arr = new boolean [n+1];
 
+      System.out.println("Prime numbers up to "+ n);
+      
        for (int i = 2; i<arr.length; i++){
         arr[i] =true;
        }
