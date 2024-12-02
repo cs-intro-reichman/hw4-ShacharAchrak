@@ -13,6 +13,7 @@ public class KeywordsDetector {
             "Our new technology presents a significant paradigm shift",
             "Effective presentations must be clear, concise, and humble"
         };
+
         // Some keywords that typically signal bullshit contents in business presentations 
         String[] keywords = {"synergy", "disrupt", "leverage", "Paradigm", "transform"};
         detectAndPrint(sentences, keywords);
@@ -21,6 +22,20 @@ public class KeywordsDetector {
     // Iterates through all the sentences.
     // If a sentence contains one or more of the kewords, prints it.
     public static void detectAndPrint(String[] sentences, String[] keywords) {
-        // Replace this comment with your code
+        for (int i = 0; i < sentences.length; i++){
+            sentences[i] = sentences[i].toLowerCase();
+        }
+        for (int i = 0; i < keywords.length; i++){
+            keywords[i] = keywords[i].toLowerCase();
+        }
+        for (int i = 0; i < sentences.length; i++){
+            for( int j = 0; j < keywords.length; j++){
+                if(sentences[i].contains(keywords[j])){
+                    System.out.print(sentences[i]);
+                    break;
+                }
+
+            }
+        }
     }
 }
