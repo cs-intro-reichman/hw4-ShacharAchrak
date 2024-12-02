@@ -23,6 +23,6 @@ public class Primes {
        }
     }
    
-    System.out.println("There are " + count + " primes between 2 and " + n + " (" +  (int) ((double) count / (n - 1) * 100) + "% are primes)");
+    System.out.println("There are " + count + " primes between 2 and " + n + " (" +  (int) ((double) count / (n) * 100) + "% are primes)");
    }
 }
